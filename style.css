@@ -1,0 +1,275 @@
+:root {
+    --animate-delay: 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+aside {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+    background-color: rgb(37, 37, 37);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    z-index: 6;
+}
+
+aside a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    align-self: flex-start;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.4s;
+}
+
+aside a:first-of-type {
+    margin-bottom: auto;
+}
+
+aside a:last-of-type {
+    margin-top: auto;
+}
+
+aside a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    background-color: rgb(168, 168, 168);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.2s ease;
+    transition-delay: 0.2s;
+}
+
+aside a:hover::after {
+    width: 100%;
+}
+
+aside a:last-of-type {
+    margin-bottom: 0;
+}
+
+aside a:hover, aside a.active {
+    color: rgb(168, 168, 168);
+}
+
+aside a i {
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin-left: 300px;
+}
+
+main .home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main .home a.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: relative;
+}
+
+main .home a.profile-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+    border-radius: 100%;
+}
+
+main .home h1 {
+    font-weight: 100;
+    font-size: 80px;
+    margin: 20px auto;
+    margin-top: 40px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+main .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+main .list .list-item {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+main .list .list-item img {
+    width: 100%;
+}
+
+main .list .list-item .list-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s;
+    padding: 40px;
+    text-align: center;
+}
+
+main .list .list-item:hover .list-body {
+    opacity: 1;
+}
+
+main .list .list-item .list-body p {
+    line-height: 30px;
+    font-weight: 600;
+}
+
+main .contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main .contact a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+main .contact a i {
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 150px;
+    top: 0;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    aside {
+        left: -300px;
+    }
+
+    main {
+        margin-left: 0px;
+    }
+
+    .contact a {
+        font-size: 30px !important;
+    }
+}

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Drawings - Burak Ataseven</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <aside>
+            <a href="/"><i class="fas fa-home"></i>HOME</a>
+            <a href="/drawings/" class="active"><i class="fas fa-paintbrush"></i>DRAWINGS</a>
+            <a href="/web/"><i class="fa fa-window-maximize"></i>WEB</a>
+            <a href="/contact/"><i class="fa fa-phone"></i>CONTACT</a>
+        </aside>
+        <main>
+            <div class="bg animate__animated animate__delay-1s animate__fadeOut">
+                <div class="lds-ripple"><div></div><div></div></div>
+            </div>
+            <div class="list">
+                <a href="/images/drawing-1.jpg" target="_blank" class="list-item">
+                    <img src="/images/drawing-1-thumbnail.jpg">
+                    <div class="list-body">
+                        <h1>Drawing 1</h1>
+                    </div>
+                </a>
+                <a href="/images/drawing-2.jpg" target="_blank" target="_blank" class="list-item">
+                    <img src="/images/drawing-2-thumbnail.jpg">
+                    <div class="list-body">
+                        <h1>Drawing 2</h1>
+                    </div>
+                </a>
+                <a href="/images/drawing-3.jpg" target="_blank" target="_blank" class="list-item">
+                    <img src="/images/drawing-3-thumbnail.jpg">
+                    <div class="list-body">
+                        <h1>Drawing 3</h1>
+                    </div>
+                </a>
+                <a href="/images/drawing-4.jpg" target="_blank" target="_blank" class="list-item">
+                    <img src="/images/drawing-4-thumbnail.jpg">
+                    <div class="list-body">
+                        <h1>Drawing 4</h1>
+                    </div>
+                </a>
+                <a href="/images/drawing-5.jpg" target="_blank" target="_blank" class="list-item">
+                    <img src="/images/drawing-5-thumbnail.jpg">
+                    <div class="list-body">
+                        <h1>Drawing 5</h1>
+                    </div>
+                </a>
+            </div>
+        </main>
+        <script> </script>
+        <script>
+            setTimeout(function() {
+                document.getElementsByClassName('bg')[0].remove();
+            }, 1400);
+        </script>
+    </body>
+</html>
